@@ -4,10 +4,11 @@ This application goal is to create an user interface to download YT videos.
 
 ## Libraries
 
-- Pytube
+- pytube
 - PySimpleGUI 
 
 
 ### Notes:
 
-- Install pytube before run the project `pip install pytube`
+- Install pytube `pip install pytube`
+- Install PySimpleGUI `python -m pip install pysimplegui`
