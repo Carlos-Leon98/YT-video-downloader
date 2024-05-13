@@ -6,3 +6,8 @@ This application goal is to create an user interface to download YT videos.
 
 - Pytube
 - PySimpleGUI 
+
+
+### Notes:
+
+- Install pytube before run the project `pip install pytube`
