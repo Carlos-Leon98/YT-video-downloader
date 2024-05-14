@@ -1,0 +1,5 @@
+# Ignorar directorio __pycache__ dentro de src/
+src/__pycache__/
+
+# Ignorar directorio __pycache__ dentro de src/controllers/
+src/controllers/__pycache__/
