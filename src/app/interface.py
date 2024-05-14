@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from ..controllers import downloader
+from controllers import downloader
 
 layout = [  [sg.Text("Enter YT video URL (Link)")],
             [sg.InputText()],
