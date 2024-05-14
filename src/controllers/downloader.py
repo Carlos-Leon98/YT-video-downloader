@@ -1,4 +1,4 @@
-from pytube import Youtube  # Import the YouTube class from the pytube library
+from pytube import YouTube  # Import the YouTube class from the pytube library
 
 def downloadVideo(savePath, link):
     """
@@ -12,7 +12,7 @@ def downloadVideo(savePath, link):
         None
     """
     try:
-        yt = Youtube(link) # Create a YouTube object with the provided URL
+        yt = YouTube(link) # Create a YouTube object with the provided URL
     except:
         print("Connection Error") # Print error message if connection fails
 
