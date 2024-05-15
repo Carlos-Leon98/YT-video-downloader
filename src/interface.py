@@ -21,7 +21,7 @@ def set_user_interface():
 
         # Call the downloadVideo function from the downloader module with the provided URL
         downloader.downloadVideo(
-            "", # Save path
+            "src/videos/", # Save path
             values[0] # URL provided by the user
         )
 
