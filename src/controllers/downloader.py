@@ -17,14 +17,13 @@ def downloadVideo(savePath, link):
         print("Error creating Youtube object:", e) # Print error message if connection fails
 
     #  Get all streams and filter for mp4 files
-    mp4_streams = yt.streams.filter(file_extension='mp4')
-
-    # Get the video with the highest resolution
-    d_video = mp4_streams[-1]
+    stream = yt.streams.get_by_itag(137)
 
     try:
         # Download the video to the specified savePath
-        d_video.download(output_path=savePath)
+        stream.download(output_path=savePath)
         print('Video downloaded successfully!') # Print success message
+        return True
     except Exception as e:
         print("Error downloading video:", e) # Print error message if download fails
+        return False
