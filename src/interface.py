@@ -20,12 +20,19 @@ def set_user_interface():
             break
 
         # Call the downloadVideo function from the downloader module with the provided URL
-        downloader.downloadVideo(
+        YT_video = downloader.downloadVideo(
             "src/videos/", # Save path
             values[0] # URL provided by the user
         )
 
-        # Print message to confirm the downloaded video
-        print("YT video from link:", values[0], "was downloaded successfully")
+        if YT_video:
+            # Print message to confirm the downloaded video
+            print("YT video from link:", values[0], "was downloaded successfully")
+        else:
+            # Print message saying something went wrong downloading the video
+            print("Something unexpected happened, please try again later.")
+        
+
+        
 
     window.close() # Close the PySimpleGUI window when the loop exits
