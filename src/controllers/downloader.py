@@ -1,6 +1,6 @@
 from pytube import YouTube  # Import the YouTube class from the pytube library
 
-def downloadVideo(savePath, link):
+def downloadVideo(savePath, link, itag):
     """
     Download a YouTube video given its URL.
 
@@ -17,7 +17,7 @@ def downloadVideo(savePath, link):
         print("Error creating Youtube object:", e) # Print error message if connection fails
 
     #  Get all streams and filter for mp4 files
-    stream = yt.streams.get_by_itag(137)
+    stream = yt.streams.get_by_itag(itag)
 
     try:
         # Download the video to the specified savePath
@@ -25,5 +25,8 @@ def downloadVideo(savePath, link):
         print('Video downloaded successfully!') # Print success message
         return True
     except Exception as e:
-        print("Error downloading video:", e) # Print error message if download fails
-        return False
+        if itag == 22:
+            print("Error downloading video:", e) # Print error message if download fails
+            return False
+        else:
+            downloadVideo(savePath, link, 22) # Running function for a lower resolution
