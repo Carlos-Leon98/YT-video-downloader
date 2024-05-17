@@ -17,5 +17,5 @@ This application goal is to create an user interface to download YT videos.
 ### TODOs
 
 - [X] Create a logic to download video base on the max resolution available
-- [ ] Add logic to handle more resolutions
-- [ ] Improve exception handlers
+- [X] Add logic to handle more resolutions
+- [X] Improve exception handlers
