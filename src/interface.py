@@ -22,8 +22,7 @@ def set_user_interface():
         # Call the downloadVideo function from the downloader module with the provided URL
         YT_video = downloader.downloadVideo(
             "src/videos/", # Save path
-            values[0], # URL provided by the user
-            137 # Itag to choose the video resolution
+            values[0] # URL provided by the user
         )
 
         if YT_video:
